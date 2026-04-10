@@ -24,7 +24,7 @@ jobs:
         run: dotnet nuget add source "https://nuget.pkg.github.com/bubus1kk/index.json" --name github --username bubus1kk --password ${{ secrets.PACKAGES_PAT }} --store-password-in-clear-text
 
       - name: Restore dependencies
-        run: dotnet restore FigureCalculatorLibrary.Test/FigureCalculatorLibraryTest/FigureCalculatorLibraryTest.csproj
+        run: dotnet restore FigureCalculatorLibrary.Test/FigureCalculatorLibraryTest/FigureCalculatorLibraryTest/FigureCalculatorLibraryTest.csproj
 
       - name: Run tests
-        run: dotnet test FigureCalculatorLibrary.Test/FigureCalculatorLibraryTest/FigureCalculatorLibraryTest.csproj --configuration Release --no-restore
+        run: dotnet test FigureCalculatorLibrary.Test/FigureCalculatorLibraryTest/FigureCalculatorLibraryTest/FigureCalculatorLibraryTest.csproj --configuration Release --no-restore
